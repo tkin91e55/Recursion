@@ -1,8 +1,5 @@
 public class permutate {
 
-   /* This is my first java program.  
-    * This will print 'Hello World' as the output
-    */
 	static int w[] = new int[9];
 	static boolean used[] = new boolean[10];
 
@@ -10,9 +7,9 @@ public class permutate {
 		int a = w[0], b = w[1], c = w[2], d = w[3], e = w[4], f=w[5], g=w[6], h=w[7], p = w[8];
 
 		if(len==9){
-			//System.out.println("***a="+a+" b="+b+" c="+c+" d="+d+" e="+e+" f="+f+" g="+g+" h="+h+" p="+p);
-			System.out.println("level 9 reached");
-			System.out.println("###a="+a+" b="+b+" c="+c+" d="+d+" e="+e+" f="+f+" g="+g+" h="+h+" p="+p);
+			if(((a*10+b) - (c*10+d) + (g*10+h) == p*111) && ((a*10+b) - (c*10+d) == (e*10+f))) {
+			System.out.println("***a="+a+" b="+b+" c="+c+" d="+d+" e="+e+" f="+f+" g="+g+" h="+h+" p="+p);
+		}
 		return;
 		}
 
@@ -20,21 +17,8 @@ public class permutate {
 			if(used[i]) continue;
 			used[i] = true;
 			w[len] = i;
-			System.out.println("w:");
-			for (int j=0; j<w.length; j++)
-				{
-				  System.out.print(w[j]+ " ");
-				}
-			System.out.println("\nused:");
-			for (int j=0; j<used.length; j++)
-				{
-				  System.out.print(used[j]+ " ");
-				}
-			System.out.println("\nBefore recur: a="+a+" b="+b+" c="+c+" d="+d+" e="+e+" f="+f+" g="+g+" h="+h+" p="+p);
-			System.out.println("Length: " + len);
 			recur(len +1);
 			used[i] = false;
-			System.out.println("******\n\n******\n");
 		}
 
 	}
