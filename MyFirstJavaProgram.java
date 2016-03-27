@@ -11,6 +11,8 @@ public class MyFirstJavaProgram {
 
 		if(len==9){
 			//System.out.println("***a="+a+" b="+b+" c="+c+" d="+d+" e="+e+" f="+f+" g="+g+" h="+h+" p="+p);
+			System.out.println("level 9 reached");
+			System.out.println("###a="+a+" b="+b+" c="+c+" d="+d+" e="+e+" f="+f+" g="+g+" h="+h+" p="+p);
 		return;
 		}
 
@@ -29,8 +31,10 @@ public class MyFirstJavaProgram {
 				  System.out.print(used[j]+ " ");
 				}
 			System.out.println("\nBefore recur: a="+a+" b="+b+" c="+c+" d="+d+" e="+e+" f="+f+" g="+g+" h="+h+" p="+p);
+			System.out.println("Length: " + len);
 			recur(len +1);
 			used[i] = false;
+			System.out.println("******\n\n******\n");
 		}
 
 	}
