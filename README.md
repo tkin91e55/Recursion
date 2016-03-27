@@ -10,5 +10,7 @@ Build
 ***
 
 Java:
+
 	*javac permutate.java
+
 	*java permutate
